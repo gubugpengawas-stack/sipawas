@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Pengawas - SIPAWAS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="bg-gray-50 font-[sans-serif]">
+
+    <header class="bg-teal-700 text-white shadow-md px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <i class="ph-bold ph-shield-check text-2xl"></i>
+            <h1 class="text-xl font-bold tracking-wide">SIPAWAS (Portal Pengawas)</h1>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="text-sm bg-teal-800 px-3 py-1 rounded-full">Akun Pengawas Utama</span>
+            <button onclick="logout()" class="text-sm bg-red-600 hover:bg-red-700 px-4 py-1.5 rounded transition font-semibold">Keluar</button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-6 md:p-8">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800">Selamat Datang, Pengawas Sekolah! 👋</h2>
+            <p class="text-gray-500 mt-1">Melalui halaman kontrol ini, Anda dapat memantau secara langsung seluruh laporan instrumen yang diisi oleh Guru dan Kepala Sekolah binaan Anda.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                <div class="p-3 bg-blue-50 text-blue-600 rounded-lg text-2xl"><i class="ph-bold ph-users"></i></div>
+                <div>
+                    <p class="text-sm text-gray-400 font-medium">Total Guru Binaan</p>
+                    <p class="text-2xl font-bold text-gray-800">0</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                <div class="p-3 bg-purple-50 text-purple-600 rounded-lg text-2xl"><i class="ph-bold ph-user-gear"></i></div>
+                <div>
+                    <p class="text-sm text-gray-400 font-medium">Kepala Sekolah</p>
+                    <p class="text-2xl font-bold text-gray-800">0</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                <div class="p-3 bg-amber-50 text-amber-600 rounded-lg text-2xl"><i class="ph-bold ph-file-text"></i></div>
+                <div>
+                    <p class="text-sm text-gray-400 font-medium">Instrumen Masuk</p>
+                    <p class="text-2xl font-bold text-gray-800">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-100 bg-gray-50">
+                <h3 class="font-bold text-gray-700">Daftar Pengisian Instrumen Terbaru</h3>
+            </div>
+            <div class="p-6 text-center py-12 text-gray-400">
+                <i class="ph-bold ph-database text-4xl mb-2 text-gray-300 block"></i>
+                <p class="text-sm italic">Belum ada data instrumen masuk dari database Firestore.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function logout() {
+            alert("Anda telah keluar.");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
